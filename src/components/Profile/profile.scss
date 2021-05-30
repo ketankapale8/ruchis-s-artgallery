@@ -1,0 +1,124 @@
+@import '../global.scss';
+
+.profile{
+    background-color: white;
+    display: flex;
+
+    @include mobile{
+        flex-direction: column ;
+        align-items: center;
+        font-size: 20px;
+        // justify-content: center; 
+    }
+
+    .left{
+        flex: 0.5;
+        // background-color: white;
+        overflow: hidden;
+        
+        .imgContainer{
+            width: 600px;
+            height: 600px;
+            scrollbar-width : none;
+            background-color: white;
+            overflow: hidden;
+            border-radius: 60%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: left;
+            float: left ;
+
+            @include mobile{
+                align-items: flex-start;
+            }
+
+            img{
+                height: 100%;
+                width: 90%;
+                padding-bottom: 70px;
+
+                @include mobile{
+                    height: 50%;
+                }
+
+            }
+        }
+
+    }
+
+    .right {
+         flex: 0.5;
+         position: relative;
+         
+        .wrapper{
+             width: 100%;
+             height: 100%;
+             padding-left: 50px;
+             display: flex;
+             flex-direction: column;
+             justify-content: center;
+
+             @include mobile{
+                 padding-left: 0;
+                 align-items: center;
+             }
+             
+
+            h1 {
+                     font-weight: 300;
+                     font-size: 25px;
+                     margin: 10px;
+
+                     @include mobile{
+                         font-size: 40px;
+                     }
+                     
+            }
+
+            h2 {
+                 font-weight: 300;
+                 font-size: 20px;
+                 margin-left: 10px;
+                 
+                @include mobile {
+                    font-size: 20px;
+                }
+
+                 span {
+                     font-size: inherit;
+                     font-weight: 300;
+                      
+                 }
+
+            }
+
+        
+        }
+    
+
+
+}
+
+    a{
+        position: absolute;
+        bottom : 10px;
+        left : 50%;
+
+        img {
+            height: 20px;
+            width: 20px;
+            animation: arrowBlink 2s infinite;
+        }
+
+        @keyframes arrowBlink {
+            100% {
+                opacity: 0;
+            }
+
+        }
+    }
+}
+
+    
+
+    
